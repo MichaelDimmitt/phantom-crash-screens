@@ -2,16 +2,22 @@
 <html>
 <body>
 
-<h1>Typewriter</h1>
-
-<button onclick="typeWriter()">Click me</button>
-
-<p class="line-1" style="width: 250px" id="demo"></p>
+<p style="
+    padding: 0;
+    position: absolute;
+    top: 114px;
+    left: 202px;
+    font-size: 275%;
+    color: #6fb85f;"
+>Salsa</p>
+<p class="line-1" 
+  style="padding: 145px 213px; font-size: 181%;"
+  id="demo"></p>
 
 <script>
 var i = 0;
 var txt = `
-  . . . . . . Completed data
+  ......Completed data
   transaction with
   Supervising Bureau. Your
   data has been safely
@@ -19,6 +25,7 @@ var txt = `
 `
 var speed = 50;
 
+document.addEventListener('keypress', typeWriter);
 function typeWriter() {
   if (i < txt.length) {
     if(txt.charAt(i) == '\n')
@@ -28,6 +35,7 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+
 </script>
 <style>
 /* Global */
@@ -38,10 +46,11 @@ html{
 body{
   height: calc(100vh - 8em);
   font-family: 'Anonymous Pro', monospace;
+  background-image: url("phantom-crash-screen1.png")
 }
 .line-1{
+    color: #348660;
     position: relative;
-    border-right: 2px solid rgba(255,255,255,.75);
 }
 </style>
 
